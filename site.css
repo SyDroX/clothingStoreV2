@@ -1,3 +1,7 @@
 .product-grid {
     margin: 10px;
 }
+
+.btn-checkout{
+    color: rgb(0,0,0) !important;
+}

@@ -3,11 +3,11 @@
  */
 
 var derp = [
-    { "id": 1, "price": 150, "imageUrl": "images/pp.jpg" },
-    { "id": 2, "price": 250, "imageUrl": "images/pp.jpg" },
-    { "id": 3, "price": 50, "imageUrl": "images/pp.jpg" },
-    { "id": 4, "price": 100, "imageUrl": "images/derp.png" },
-    { "id": 5, "price": 300, "imageUrl": "images/derp.png" }
+    { "price": 150, "imageUrl": "images/pp.jpg" },
+    { "price": 250, "imageUrl": "images/pp.jpg" },
+    { "price": 50, "imageUrl": "images/pp.jpg" },
+    { "price": 100, "imageUrl": "images/derp.png" },
+    { "price": 300, "imageUrl": "images/derp.png" }
 ];
 
 var app = angular.module('myApp', ['ngMaterial']);
