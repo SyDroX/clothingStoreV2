@@ -14,21 +14,19 @@
                 <span>Clothing Store</span>
             </h2>
         </md-toolbar>
-        <md-content>
-                <md-grid-list md-cols="4" md-row-height="4:3">
-                    <md-grid-tile ng-repeat="tile in myCtrl.data">
-                        <img ng-src="{{tile.imageUrl}}"/>
-                        <md-grid-tile-footer><h3>{{tile.price}}</h3></md-grid-tile-footer>
-                    </md-grid-tile>
-                </md-grid-list>
-                <md-list ng-repeat="tile in myCtrl.data">
-                    <md-list-item>
-                        <img ng-src="{{tile.imageUrl}}"/>
-                        <h3>{{tile.price}}</h3>
-                    </md-list-item>
-                </md-list>
-            </div>
-        </md-content>
+            <md-grid-list md-cols="4" md-row-height="320px" md-gutter="40px" class="product-grid">
+                <md-grid-tile ng-repeat="tile in data">
+                    <img ng-src="{{tile.imageUrl}}" style="width: 320px;height: 320px"/>
+                    <md-grid-tile-footer><h3>{{tile.price}}</h3>
+                        <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+                            <md-icon md-svg-src="img/icons/android.svg" style="color: greenyellow;"></md-icon>
+                        </md-button>
+                        <button class="add-cart mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--mini-fab mdl-button--colored">
+                            <i class="material-icons">add_shopping_cart</i>
+                        </button>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
     </div>
 
     <script src="node_modules/angular/angular.js"></script>
