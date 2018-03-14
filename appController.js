@@ -16,7 +16,6 @@ var derp = [
     { "price": 50, "imageUrl": "images/img11.jpg" },
     { "price": 110, "imageUrl": "images/img12.jpg" },
     { "price": 120, "imageUrl": "images/img13.jpg" },
-    { "price": 110, "imageUrl": "images/img12.jpg" },
     { "price": 180, "imageUrl": "images/img14.jpg" },
     { "price": 160, "imageUrl": "images/img15.jpg" },
     { "price": 110, "imageUrl": "images/img16.jpg" },
