@@ -1,7 +1,30 @@
-.product-grid {
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.product {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 0 1px #9d9d9d;
+    position: relative;
     margin: 10px;
 }
 
-.btn-checkout{
-    color: rgb(0,0,0) !important;
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 95%;
+    padding: 2px;
+    align-items: baseline;
+    bottom: 11px;
+    background-color: #ffffff80;
+}
+.price{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 10px;
 }
