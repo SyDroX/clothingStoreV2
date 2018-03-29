@@ -28,3 +28,19 @@
     font-weight: 700;
     padding-left: 10px;
 }
+
+.remove-button.md-button.md-fab{
+    background-color: #9d9d9d;
+}
+.remove-button.md-button.md-fab:hover{
+    background-color: gray;
+}
+
+.fat-btn{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+h1.title{
+    font-size: 1.8rem;
+}
