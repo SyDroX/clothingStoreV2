@@ -1,4 +1,5 @@
 .content {
+    padding-top: 90px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -14,6 +15,7 @@
 }
 
 .header {
+
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -23,6 +25,15 @@
     bottom: 11px;
     background-color: #ffffff80;
 }
+
+.login{
+    padding-top: 70px;
+}
+
+.end-screen{
+    padding-top: 70px;
+}
+
 .price{
     font-size: 1.5rem;
     font-weight: 700;
@@ -43,4 +54,10 @@
 
 h1.title{
     font-size: 1.8rem;
+}
+
+.toolbar-fixed{
+    position: fixed;
+    z-index: 1010;
+
 }

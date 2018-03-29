@@ -7,7 +7,7 @@ var fs = require('fs')
 
 // app.get('/', (req, res) => res.send('Hello World!'))
 
-app.listen(5000, () => console.log('Example app listening on port 5000!'))
+app.listen(80, () => console.log('Example app listening on port 5000!'))
 
 app.use('/', express.static('./'))
 
@@ -23,7 +23,7 @@ function saveToFile() {
 }
 
 app.post('/save', (req, res) => {
-    let dataToAdd = req.body
+    var dataToAdd = req.body
     data.push(dataToAdd)
     saveToFile()
     res.json({})

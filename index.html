@@ -4,28 +4,29 @@
 <head>
     <meta charset="utf-8">
     <title>Clothing store</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="/site.css">
 </head>
 
 <body>
-    <div ng-app="myApp" ng-controller="myCtrl" ng-cloak layout="column">
-        <div layout="column" flex ="">
-            <md-toolbar class="md-accent">
-                <div class="md-toolbar-tools">
-                    <h1 class="title">אופנה ברשת</h1>
-                    <span flex></span>
-                    <md-button ng-if="productScreen" class="md-accent md-raised md-hue-2 fat-btn" aria-label="Checkout" ng-click="checkout()">
-                        סיום
-                    </md-button>
-                    <span ng-if="productScreen">סה"כ לתשלום: {{total}}₪</span>
-                </div>
-            </md-toolbar>
-        </div>
+<div ng-app="myApp" ng-controller="myCtrl" ng-cloak layout="column">
+    <div layout="column" flex="">
+        <md-toolbar class="md-accent toolbar-fixed">
+            <div class="md-toolbar-tools">
+                <h1 class="title">אופנה ברשת</h1>
+                <span flex></span>
+                <md-button ng-if="productScreen" class="md-accent md-raised md-hue-2 fat-btn" aria-label="Checkout"
+                           ng-click="checkout()">
+                    סיום
+                </md-button>
+                <span ng-if="productScreen">סה"כ לתשלום: {{total}}₪</span>
+            </div>
+        </md-toolbar>
+    </div>
 
-        <div ng-if="loginScreen">
-            <form name="login">
+    <div class="login" ng-if="loginScreen">
+        <form name="login">
             <div layout="column" layout-align="center center">
                 <md-input-container class="md-block">
                     <label>תעודת זהות</label>
@@ -38,36 +39,39 @@
                         </div>
                     </div>
                 </md-input-container>
-
-                <md-button type="submit" class="md-raised fat-btn" ng-click="loginStudent(studentId)">התחל</md-button>
+                <md-button class="md-raised fat-btn" ng-click="loginStudent(studentId)">התחל</md-button>
             </div>
-            </form>
-        </div>
+        </form>
+    </div>
 
-        <div layout="column" flex="">
-        <div class="content" >
-            <div class="product" ng-if="productScreen" ng-repeat="product in products">
-                <img ng-src="{{product.imageUrl}}" style="width: auto;height: 320px" />
-                <div class="header">
-                    <div class="price">{{product.price}}₪</div>
-                    <md-button ng-if="!product.in_cart" class="md-fab md-mini" aria-label="Add To Cart" ng-click="addToCart(product)">
-                        <md-icon md-svg-src="images/ic_add_shopping_cart_black_24px.svg"></md-icon>
-                    </md-button>
-                    <md-button ng-if="product.in_cart" class="md-fab md-mini remove-button" aria-label="Add To Cart" ng-click="removeFromCart(product)">
-                        <md-icon md-svg-src="images/ic_remove_shopping_cart_black_24px.svg"></md-icon>
-                    </md-button>
-                </div>
+    <div class="content" ng-if="productScreen">
+        <div class="product" ng-repeat="product in products">
+            <img ng-src="{{product.imageUrl}}" style="width: auto;height: 320px"/>
+            <div class="header">
+                <div class="price">{{product.price}}₪</div>
+                <md-button ng-if="!product.in_cart" class="md-fab md-mini" aria-label="Add To Cart"
+                           ng-click="addToCart(product)">
+                    <md-icon md-svg-src="images/ic_add_shopping_cart_black_24px.svg"></md-icon>
+                </md-button>
+                <md-button ng-if="product.in_cart" class="md-fab md-mini remove-button" aria-label="Add To Cart"
+                           ng-click="removeFromCart(product)">
+                    <md-icon md-svg-src="images/ic_remove_shopping_cart_black_24px.svg"></md-icon>
+                </md-button>
             </div>
         </div>
     </div>
-    </div>
 
-    <script src="node_modules/angular/angular.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.js"></script>
-    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
-    <script src="node_modules/angular-animate/angular-animate.js"></script>
-    <script src="node_modules/angular-material/angular-material.js"></script>
-    <script src="appController.js"></script>
+    <div class="end-screen" layout="column" layout-align="center center" ng-if="endScreen">
+        <span style="color:black">תודה על ההשתתפות</span>
+    </div>
+</div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-aria/angular-aria.js"></script>
+<script src="node_modules/angular-messages/angular-messages.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-material/angular-material.js"></script>
+<script src="appController.js"></script>
 </body>
 
 </html>
