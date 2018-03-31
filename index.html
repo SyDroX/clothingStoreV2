@@ -29,9 +29,9 @@
         <form name="login">
             <div layout="column" layout-align="center center">
                 <md-input-container class="md-block">
-                    <label>תעודת זהות</label>
+                    <label>ID</label>
                     <input required name="studentId" ng-model="studentId"
-                           ng-pattern="/^[0-9]{7,9}$/">
+                           ng-pattern="/^[0-9]{3}$/">
 
                     <div ng-messages="login.studentId.$error" role="alert">
                         <div ng-message-exp="['required', 'pattern']">

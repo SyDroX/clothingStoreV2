@@ -451,7 +451,7 @@ app.controller('myCtrl', function ($scope) {
     $scope.startTime = new Date();
 
     $scope.loginStudent = function (id) {
-        if (id && id.match(/^[0-9]{7,9}$/)) {
+        if (id && id.match(/^[0-9]{3}$/)) {
             $scope.loginScreen = false;
             $scope.productScreen = true;
             $scope.studentId = id;
